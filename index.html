@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Equipos - Voleibol Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="branding">
+            <h1>🏐 Torneo Profesional de Voleibol</h1>
+            <p class="subtitle">Formulario de inscripción oficial de equipos</p>
+        </div>
+        <form id="registroEquipoForm" autocomplete="off">
+            <div class="form-group">
+                <label for="nombreEquipo">Nombre del equipo</label>
+                <input type="text" id="nombreEquipo" name="nombreEquipo" required placeholder="Ej: Voleibol Spartans">
+            </div>
+            <div class="form-group">
+                <label for="club">Club o institución</label>
+                <input type="text" id="club" name="club" placeholder="Ej: Club Deportivo Central">
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoría del equipo</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecciona la categoría</option>
+                    <option value="masculina">Masculina</option>
+                    <option value="femenina">Femenina</option>
+                    <option value="mixta">Mixta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tieneLibero">¿El equipo cuenta con líbero?</label>
+                <select id="tieneLibero" name="tieneLibero" required>
+                    <option value="">Selecciona</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="numJugadores">Número de jugadores (mínimo 6)</label>
+                <input type="number" id="numJugadores" name="numJugadores" min="6" max="14" required placeholder="6-14">
+            </div>
+            <div class="form-group">
+                <label for="nombreCoach">Nombre completo del coach</label>
+                <input type="text" id="nombreCoach" name="nombreCoach" required placeholder="Ej: Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label for="emailCoach">Correo electrónico del coach</label>
+                <input type="email" id="emailCoach" name="emailCoach" required placeholder="ejemplo@correo.com">
+            </div>
+            <div class="form-group">
+                <label for="telefonoCoach">Teléfono del coach</label>
+                <input type="tel" id="telefonoCoach" name="telefonoCoach" required placeholder="Ej: 55-1234-5678">
+            </div>
+            <button type="submit" class="btn-main">Inscribir equipo</button>
+        </form>
+        <div id="mensajeRegistro"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

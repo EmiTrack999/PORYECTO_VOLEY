@@ -1,0 +1,279 @@
+/* --- Base Styles --- */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #87CEEB 0%, #FFD700 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    background: #fff;
+    max-width: 440px;
+    margin: 40px auto;
+    padding: 38px 34px 22px 34px;
+    border-radius: 22px;
+    box-shadow: 0 10px 40px rgba(0, 123, 255, 0.2);
+    position: relative;
+    animation: fadeIn 0.8s;
+    border-top: 8px solid #007bff;
+    border-bottom: 3px solid #ff6f00;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: none; }
+}
+.branding {
+    text-align: center;
+    margin-bottom: 18px;
+}
+h1 {
+    margin: 0 0 4px 0;
+    font-size: 2.2rem;
+    color: #007bff;
+    letter-spacing: 1px;
+    font-weight: 900;
+    text-shadow: 0 2px 8px #ff6f0033;
+}
+.subtitle {
+    color: #ff6f00;
+    font-size: 1.13rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* --- Form Styles --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+label {
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+}
+input, select {
+    padding: 10px 12px;
+    border-radius: 7px;
+    border: 1.5px solid #ff6f00;
+    font-size: 1rem;
+    background: #f0f8ff;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    background: #e6f7ff;
+    box-shadow: 0 0 0 2px #007bff55;
+}
+
+/* --- Primary Button --- */
+.btn-main {
+    background: linear-gradient(90deg, #007bff 0%, #ff6f00 100%);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: 1.13rem;
+    border-radius: 7px;
+    padding: 13px 0;
+    margin-top: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px #ff6f0022;
+    transition: background 0.3s, transform 0.2s;
+    letter-spacing: 0.5px;
+}
+.btn-main:hover {
+    background: linear-gradient(90deg, #ff6f00 0%, #007bff 100%);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* --- New Action Buttons --- */
+.action-buttons {
+    text-align: center;
+    margin-top: 25px;
+}
+.action-buttons p {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+.btn-secondary, .btn-tertiary {
+    background: #e9ecef;
+    color: #007bff;
+    border: 2px solid #007bff;
+    font-weight: bold;
+    font-size: 1.13rem;
+    border-radius: 7px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.btn-secondary:hover {
+    background: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+.btn-tertiary {
+    border-color: #ff6f00;
+    color: #ff6f00;
+}
+.btn-tertiary:hover {
+    background: #ff6f00;
+    color: #fff;
+}
+
+/* --- Messages and Media Queries --- */
+#mensajeRegistro {
+    margin-top: 22px;
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+    min-height: 32px;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 600px) {
+    .container {
+        max-width: 99vw;
+        padding: 14px 2vw 8px 2vw;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- Tournament Bracket Styles --- */
+.cuadro-torneo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.partido {
+    background-color: #f0f8ff;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    font-weight: bold;
+    color: #007bff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.partido span {
+    font-size: 1.1rem;
+}
+.partido span:first-child {
+    color: #ff6f00;
+}
+
+/* --- Admin & Team Pages Styling --- */
+.admin-container {
+    max-width: 800px;
+    padding: 30px;
+}
+.stats-card {
+    background-color: #f0f8ff;
+    border: 1px solid #007bff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.stats-card p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+.stats-card span {
+    font-size: 2.5rem;
+    color: #ff6f00;
+    font-weight: 900;
+}
+.seccion-lista, .seccion-cuadro {
+    margin-top: 35px;
+}
+#listaEquipos {
+    list-style: none;
+    padding: 0;
+}
+#listaEquipos li {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.team-card {
+    border: 2px solid #007bff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    background: #f0f8ff;
+}
+.team-card h3 {
+    color: #007bff;
+    margin-top: 0;
+}
+
+/* Estilos para el CRUD en el panel de admin */
+.equipo-actions {
+    margin-left: auto;
+}
+.equipo-actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 8px;
+    transition: background-color 0.2s;
+}
+.btn-edit {
+    background-color: #ffc107;
+    color: #333;
+}
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+.btn-delete:hover {
+    background-color: #c82333;
+}
+/* New back button style */
+.btn-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.btn-back:hover {
+    color: #ff6f00;
+    transform: translateX(-5px);
+}

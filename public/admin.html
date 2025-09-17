@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control del Torneo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="index.html" class="btn-back">← Regresar al menú</a>
+    <div class="container admin-container">
+        <div id="password-form">
+            <h2>Acceso de Administrador</h2>
+            <p>Introduce la contraseña para ver el panel de control.</p>
+            <input type="password" id="adminPassword" placeholder="Contraseña">
+            <button id="accessBtn" class="btn-main">Acceder</button>
+            <div id="passwordError" style="color:red; margin-top:10px;"></div>
+        </div>
+        <div id="admin-dashboard" style="display:none;">
+            <div class="branding">
+                <h1>Panel de Control del Torneo</h1>
+                <p class="subtitle">Gestión y visualización de equipos</p>
+            </div>
+            <div class="stats-card">
+                <p>Equipos Registrados: <span id="equipoCount">0</span></p>
+            </div>
+            
+            <div class="seccion-lista">
+                <h2>Lista de Equipos</h2>
+                <p class="subtitle">Haz clic en un equipo para editar o eliminar.</p>
+                <ul id="listaEquipos">
+                    </ul>
+            </div>
+
+            <div class="seccion-cuadro">
+                <h2>Cuadro del Torneo</h2>
+                <div id="cuadroTorneo"></div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Ejecutar server.js",
+			"type": "shell",
+			"command": "node public/server.js",
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
